@@ -232,7 +232,7 @@ $(() => {
 
 function showObjectData(data, target, properties) {
 
-     const list = document.createElement("ul");
+     const list = document.createElement("ol");
  
     data.forEach((obj) => {
         const listItem = document.createElement("li");
