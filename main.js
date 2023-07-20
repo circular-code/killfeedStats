@@ -8,6 +8,7 @@ function query (data) {
         let killer;
         let weapon;
         let distance;
+if (content) {
 
         if (content.indexOf("committed suicide") > -1) {
             victim = content.split("committed suicide")[0];
@@ -64,6 +65,19 @@ function query (data) {
         message.deathReason = deathReason ? deathReason.trim().replaceAll('**', '') : "";
         message.distance = distance ? distance.trim().replaceAll('**', '') : "";
         message.weapon = weapon ? weapon.trim().replaceAll('**', '') : "";
+}
+delete message.type;
+delete message.id;
+delete message.timestampEdited;
+delete message.callEndedTimestamp;
+delete message.isPinned;
+delete message.author;
+delete message.attachments;
+delete message.embeds;
+delete message.stickers;
+delete message.reactions;
+delete message.mentions;
+delete message.content;
     }
     return data;
 }
