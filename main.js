@@ -32,7 +32,7 @@ if (content) {
             else if (content.indexOf("GOT KILLED BY") !== -1)
                 killLineArray = content.split(" GOT KILLED BY ");
             
-            deathReason = "playerkill";
+            deathReason = "kill";
             victim = killLineArray[0];
             message.victim = victim;
             
